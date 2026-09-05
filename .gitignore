@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.token
+*.access_token
+live_feature_cache/
+live_feature_cache_1m/
+backtest_results/
+logs/
+*.log
+.DS_Store

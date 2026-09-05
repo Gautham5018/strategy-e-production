@@ -1,0 +1,25 @@
+Strategy E Production V6.3
+
+Strategy:
+- 50% at 1R
+- remaining 50% at 3R
+- initial stop = signal candle low
+- 90-minute stagnation after partial
+- stagnation threshold = 0.20% beyond partial exit price
+- EOD flatten = 15:00
+
+Operational controls:
+- Browser dashboard: http://127.0.0.1:8081/
+- Manual exit: POST /admin/exit/{symbol}
+- Manual flatten: POST /admin/flatten
+- Reconcile: POST /admin/reconcile
+- Unified CLI through run.py
+
+Safety:
+- Normal live entries remain fail-closed behind live_gate.
+- Manual live exits use the dedicated emergency exit gate and are not blocked by KILL_SWITCH/TRADING_ENABLED.
+- Manual exit is serialized per symbol and protected from automatic duplicate exits with manual_exit_pending.
+- Startup reconciliation remains mandatory by default.
+
+Validation:
+- 95 tests passed.

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.strategyE.trading</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/YOUR_USER/strategy_e_production_v6</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/YOUR_USER/strategy_e_production_v6/.venv/bin/python</string>
+        <string>/Users/YOUR_USER/strategy_e_production_v6/run.py</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PYTHONUNBUFFERED</key>
+        <string>1</string>
+        <key>TZ</key>
+        <string>Asia/Kolkata</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>ProcessType</key>
+    <string>Interactive</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/YOUR_USER/strategy_e_production_v6/logs/launchd.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/YOUR_USER/strategy_e_production_v6/logs/launchd.err.log</string>
+</dict>
+</plist>

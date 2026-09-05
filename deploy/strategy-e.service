@@ -1,0 +1,20 @@
+[Unit]
+Description=Strategy E Trading Engine
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=strategy
+WorkingDirectory=/opt/strategy-e
+EnvironmentFile=/opt/strategy-e/.env
+ExecStart=/opt/strategy-e/.venv/bin/python /opt/strategy-e/app.py
+Restart=always
+RestartSec=5
+KillSignal=SIGTERM
+TimeoutStopSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
